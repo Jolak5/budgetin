@@ -7,12 +7,11 @@ class GroupsController < ApplicationController
   def index
 
     @total_amounts =    Group.includes(:user, :entities).order(created_at: :desc)
-     
-    @groups = current_user.groups
   end
 
   # GET /groups/1 or /groups/1.json
   def show
+      
   end
 
   # GET /groups/new

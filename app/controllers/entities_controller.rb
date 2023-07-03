@@ -6,10 +6,17 @@ class EntitiesController < ApplicationController
   # GET /entities or /entities.json
   def index
     @entities = current_user.entities
+    @group = Group.find(params[:group_id])
+    @entities = @group.entities
+    @total_amounts =    Group.includes(:user, :entities).order(created_at: :desc)
+
+
   end
 
   # GET /entities/1 or /entities/1.json
   def show
+    @group = Group.find(params[:group_id])
+    @entity = @group.entities.find(params[:id])
   end
 
   # GET /entities/new

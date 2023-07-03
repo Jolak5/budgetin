@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   root 'groups#index'
   
-  resources :entities
-  resources :groups
+  resources :groups do
+    resources :entities
+  end
+  
   resources :users
   resources :splash, only: [:index]
  
