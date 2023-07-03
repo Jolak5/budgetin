@@ -9,12 +9,12 @@ class Ability
     can :read, :all
     can :create, [Group, Entity]
 
-    if user.role == 'admin'
+ 
       can :manage, :all
-    else
+
       can :destroy, Group, author: user
       can :destroy, Entity, author: user
-    end
+
 
     
   end

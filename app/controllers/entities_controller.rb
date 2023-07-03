@@ -5,7 +5,7 @@ class EntitiesController < ApplicationController
 
   # GET /entities or /entities.json
   def index
-    @entities = Entity.all
+    @entities = current_user.entities
   end
 
   # GET /entities/1 or /entities/1.json
@@ -23,7 +23,8 @@ class EntitiesController < ApplicationController
 
   # POST /entities or /entities.json
   def create
-    @entity = Entity.new(entity_params)
+    current_user
+    @entity = current_user.entities.new(entity_params)
 
     respond_to do |format|
       if @entity.save

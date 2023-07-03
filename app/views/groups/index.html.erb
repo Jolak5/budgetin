@@ -4,9 +4,32 @@
 
 <div id="groups">
   <% @groups.each do |group| %>
-    <%= render group %>
+      <p>
+    <strong>Name:</strong>
+    <%= group.name %>
+  </p>
+
+  <p>
+    <strong>Icon:</strong>
+    <%= group.icon %>
+  </p>
+
+   <p>
+    <strong>ID:</strong>
+    <%= group.id %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= group.user_id %>
+  </p>
+
+  
+  <p class="ingredients-total">Total Price: $ <%= group.entities.sum(:amount) %></p>
+
+
     <p>
-      <%= link_to "Show this group", group %>
+      <%= link_to "Show this transactions", entities_path %>
     </p>
   <% end %>
 </div>
