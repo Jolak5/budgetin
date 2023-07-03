@@ -8,5 +8,9 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
       devise_parameter_sanitizer.permit(:account_update, keys: [:name])
     end
+
+    rescue_from CanCan::AccessDenied do |exception|
+      render 'errors/access_denied', status: :forbidden
+    end
   end
   
