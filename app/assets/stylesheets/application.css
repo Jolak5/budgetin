@@ -21,11 +21,41 @@ body {
 }
 
 .app-container {
-  width: 480px;
+  width: 400px;
 }
 
 a {
   text-decoration: none;
+}
+
+/* splash page */
+
+.splash-page {
+  background-color: #3778c2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.splash-page h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #434b54;
+}
+
+.signup-link,
+.login-link {
+  text-decoration: none;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.signup-link:hover,
+.login-link:hover {
+  text-decoration: underline;
 }
 
 /* entity header */
@@ -33,29 +63,16 @@ a {
 .entity-header {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-bottom: 20px;
-  background-color: #45a049;
-}
-
-.back-link {
-  margin-right: 10px;
-}
-
-.back-link a {
-  color: #4caf50;
-  text-decoration: none;
-  font-weight: bold;
+  background-color: #3778c2;
+  padding: 20px;
 }
 
 .entity-header h1 {
   font-size: 24px;
   margin-bottom: 5px;
-}
-
-.entity-header p {
-  font-size: 16px;
-  margin-top: 5px;
+  color: white;
+  padding-left: 30%;
 }
 
 .group-header {
