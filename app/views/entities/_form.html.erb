@@ -1,9 +1,8 @@
 <%= form_with(model: @entity, url: group_entities_path, method: :post ) do |form| %>
   <% if entity.errors.any? %>
-    <div style="color: red">
+    <div class="error-message">
       <h2><%= pluralize(entity.errors.count, "error") %>
         prohibited this entity from being saved:</h2>
-
       <ul>
         <% entity.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -12,19 +11,19 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
+  <div class="form-group">
+    <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
-    <%= form.label :amount, style: "display: block" %>
+  <div class="form-group">
+    <%= form.label :amount %>
     <%= form.number_field :amount %>
   </div>
 
   <%= form.hidden_field :group_id, value: params[:group_id] %>
 
-  <div>
+  <div class="form-group">
     <%= form.submit %>
   </div>
 <% end %>

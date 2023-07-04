@@ -1,10 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="group-header">
-  <%= link_to "Back", root_path %>
+<div class="entity-header">
+  <div class="back-link">
+    <%= link_to "Back", root_path %>
+  </div>
   <h1>Transactions</h1>
   <p>Total amount $<%= @entities.sum(:amount).to_i %></p>
-
 </div>
 
 <div id="entities">

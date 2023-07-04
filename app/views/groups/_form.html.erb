@@ -1,9 +1,8 @@
 <%= form_with(model: group) do |form| %>
   <% if group.errors.any? %>
-    <div style="color: red">
+    <div class="error-message">
       <h2><%= pluralize(group.errors.count, "error") %>
         prohibited this group from being saved:</h2>
-
       <ul>
         <% group.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -12,17 +11,17 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
+  <div class="form-group">
+    <%= form.label :name %>
     <%= form.text_field :name, required: true %>
   </div>
 
-  <div>
-    <%= form.label :icon, style: "display: block" %>
+  <div class="form-group">
+    <%= form.label :icon %>
     <%= form.file_field :icon, required: true %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.submit %>
   </div>
 <% end %>
