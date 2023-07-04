@@ -8,10 +8,8 @@
   <% @groups.each do |group| %>
     <%= link_to group_entities_path(group) do %>
       <div class="group-container">
-        <p>
-          <%= group.icon %>
-        </p>
 
+        <%= image_tag url_for(group.icon), class: "group-img" if group.icon.attached? %>
         <div>
 
           <p>

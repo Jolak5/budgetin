@@ -78,3 +78,5 @@ gem 'devise'
 gem 'cancancan'
 
 gem 'erb-formatter'
+
+gem 'rspec'
