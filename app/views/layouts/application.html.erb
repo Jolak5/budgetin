@@ -11,11 +11,17 @@
   </head>
 
   <body>
-   <%= render 'shared/nav' %>
-    <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-   
-
+    <div class="app-container">
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <%= render "shared/nav" %>
+      <%= yield %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+    <%= javascript_include_tag "application" %>
   </body>
 </html>

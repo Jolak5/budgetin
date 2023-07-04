@@ -1,38 +1,22 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Entities</h1>
-
+<h1>Transactions</h1>
+<p>Total amount $<%= @entities.sum(:amount).to_i %></p>
+<%= link_to "Back to entities", root_path %>
 <div id="entities">
   <% @entities.each do |entity| %>
-         <p>
-    <strong>Name:</strong>
-    <%= entity.name %>
-  </p>
+    <div class="transaction-list">
+      <p>
+        <%= entity.name %>
+      </p>
 
-  <p>
-    <strong>Author:</strong>
-    <%= entity.author_id %>
-  </p>
-
-  <p>
-    <strong>Amount:</strong>
-    <%= entity.amount %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= entity.user_id %>
-  </p>
-
-  <p>
-    <strong>Group:</strong>
-    <%= entity.group_id %>
-  </p>
-
-    <p>
-      <%= link_to "Show this entity", group_entity_path(@group, entity) %>
-    </p>
+      <p>
+        <strong>Amount:</strong>
+        $<%= entity.amount %>
+      </p>
+    </div>
   <% end %>
 </div>
-
-<%= link_to "New entity", new_group_entity_path %>
+<div class="button-div">
+  <%= link_to "add a new transaction", new_group_entity_path %>
+</div>

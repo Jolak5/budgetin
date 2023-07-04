@@ -1,37 +1,35 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Groups</h1>
+<div class="group-header">
+
+  <h1>Categories</h1></div>
 
 <div id="groups">
   <% @groups.each do |group| %>
-      <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
+    <%= link_to group_entities_path(group) do %>
+      <div class="group-container">
+        <p>
+          <%= group.icon %>
+        </p>
 
-  <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
-  </p>
+        <div>
 
-   <p>
-    <strong>ID:</strong>
-    <%= group.id %>
-  </p>
+          <p>
 
-  <p>
-    <strong>User:</strong>
-    <%= group.user_id %>
-  </p>
+            <%= group.name %>
+          </p>
 
-  
-  <p class="ingredients-total">Total Price: $ <%= group.entities.sum(:amount).to_i %></p>
+          <p>
+            <%= group.created_at.strftime("%d %B %Y") %>
+          </p>
+        </div>
 
-
-    <p>
-      <%= link_to "Show this transactions", group_entities_path(group) %>
-    </p>
+        <p class="ingredients-total">$
+          <%= group.entities.sum(:amount).to_i %></p>
+      </div>
+    <% end %>
   <% end %>
+  <div class="button-div">
+    <%= link_to "New group", new_group_path, class: "button" %>
+  </div>
 </div>
-
-<%= link_to "New group", new_group_path %>

@@ -31,11 +31,12 @@ class EntitiesController < ApplicationController
   # POST /entities or /entities.json
   def create
     current_user
+    @group = Group.find(params[:group_id])
     @entity = current_user.entities.new(entity_params)
-
+  
     respond_to do |format|
       if @entity.save
-        format.html { redirect_to entity_url(@entity), notice: "Entity was successfully created." }
+        format.html { redirect_to group_entities_url(@group), notice: "Entity was successfully created." }
         format.json { render :show, status: :created, location: @entity }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -43,6 +44,7 @@ class EntitiesController < ApplicationController
       end
     end
   end
+  
 
   # PATCH/PUT /entities/1 or /entities/1.json
   def update
