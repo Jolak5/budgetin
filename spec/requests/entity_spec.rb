@@ -6,7 +6,6 @@ RSpec.describe 'Entity', type: :request do
       @user = FactoryBot.create(:user)
       sign_in @user
 
-
       @group = FactoryBot.create(:group)
     end
 
