@@ -109,6 +109,11 @@ a {
   padding: 5px 20px;
 }
 
+.group-container div > p {
+  font-weight: 300;
+  color: #434b54;
+}
+
 .total-amount {
   margin: 10px 0;
 }
