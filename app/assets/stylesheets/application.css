@@ -107,10 +107,6 @@ a {
   border-radius: 5px;
 }
 
-.button-div a:hover {
-  background-color: #45a049;
-}
-
 /* form css */
 .error-message {
   color: red;
@@ -152,17 +148,21 @@ a {
   margin-top: 20px;
 }
 
+.back-link a {
+  display: inline-block;
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button-div a:hover {
+  background-color: #45a049;
+}
+
 .back-link a:hover {
   text-decoration: underline;
 }
 
 #groups > a {
   color: black;
-}
-
-.back-link a {
-  display: inline-block;
-  color: #4caf50;
-  text-decoration: none;
-  font-weight: bold;
 }
