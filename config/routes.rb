@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'groups#index'
   
-  resources :groups, only: [:index, :new, :show] do
-    resources :entities, only: [:index, :new, :show] 
+  resources :groups do
+    resources :entities
   end
   
   resources :users

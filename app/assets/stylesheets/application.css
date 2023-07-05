@@ -26,7 +26,7 @@ body {
 }
 
 .app-container {
-  width: 400px;
+  width: 480px;
   background-color: white;
   border-radius: 20px;
   margin-top: 2%;
@@ -151,7 +151,7 @@ a {
 .form-group input[type="text"],
 .form-group input[type="file"],
 .form-group textarea {
-  width: 100%;
+  width: 95%;
   padding: 5px;
   border: 1px solid #ccc;
 }
