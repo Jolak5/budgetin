@@ -113,7 +113,6 @@ a {
   margin: 10px 0;
 }
 
-.total-amount p:nth-child(even),
 .transaction-list p:nth-child(even),
 .total-amount p:nth-child(even) {
   font-weight: bold;
