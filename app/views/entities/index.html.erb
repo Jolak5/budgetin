@@ -1,15 +1,17 @@
-<p style="color: green"><%= notice %></p>
-
 <div class="entity-header">
+
   <div class="back-link">
     <%= link_to "Back", root_path %>
   </div>
   <h1>Transactions</h1>
 
 </div>
-<p>Total amount $<%= @entities.sum(:amount).to_i %></p>
+<div class="total-amount">
+  <p>Total amount</p>
+  <p>$<%= @entities.sum(:amount).to_i %></p>
+</div>
+<div id="entities" class="entity">
 
-<div id="entities">
   <% @entities.each do |entity| %>
     <div class="transaction-list">
       <p>
@@ -17,7 +19,6 @@
       </p>
 
       <p>
-        <strong>Amount:</strong>
         $<%= entity.amount %>
       </p>
     </div>

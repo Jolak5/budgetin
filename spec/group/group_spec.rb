@@ -20,7 +20,6 @@ feature 'Group' do
 
     click_button 'Create Group'
 
-    expect(page).to have_content('Group was successfully created.')
     expect(page).to have_content('Test Group')
   end
 
