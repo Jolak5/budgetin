@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    @group = Group.all
+    @group = current_user.groups
     @total_amounts = Group.includes(:user, :entities).order(created_at: :desc)
   end
 
