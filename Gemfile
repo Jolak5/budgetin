@@ -92,3 +92,5 @@ end
 group :test do
   gem 'faker'
 end
+
+gem 'pg', '~> 1.5', '>= 1.5.3'
