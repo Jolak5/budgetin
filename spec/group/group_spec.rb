@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'Group' do
   # Use FactoryBot.create
-  let(:user) { FactoryBot.create(:user) } 
+  let(:user) { FactoryBot.create(:user) }
 
   before do
     # sign in user
@@ -16,7 +16,7 @@ feature 'Group' do
     visit new_group_path
 
     fill_in 'Name', with: 'Test Group'
-    attach_file('group_icon', File.join(Rails.root, '/app/assets/images/icon.jpg')) 
+    attach_file('group_icon', File.join(Rails.root, '/app/assets/images/icon.jpg'))
 
     click_button 'Create Group'
 
@@ -26,11 +26,11 @@ feature 'Group' do
 
   scenario "I can see a post's title." do
     visit groups_path
-    expect(page).to have_content("Categories")
+    expect(page).to have_content('Categories')
   end
 
   scenario "I can see a post's title." do
     visit groups_path
-    expect(page).to have_link("New group")
+    expect(page).to have_link('Add a new category')
   end
 end

@@ -23,6 +23,4 @@ RSpec.describe Entity, type: :model do
     subject.name = 'a' * 255
     expect(subject).to_not be_valid
   end
-
-
 end

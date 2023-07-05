@@ -3,7 +3,6 @@ require 'open-uri'
 
 FactoryBot.define do
   factory :group do
-
     author { FactoryBot.create(:user) }
     name { Faker::Company.name }
 
@@ -14,6 +13,5 @@ FactoryBot.define do
         content_type: 'image/png'
       )
     end
-
   end
 end

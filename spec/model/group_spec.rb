@@ -16,12 +16,10 @@ RSpec.describe Group, type: :model do
 
   it 'validates the presence of the icon file' do
     expect(subject.icon).to be_truthy
-
   end
 
   it 'name should be present' do
     subject.name = nil
     expect(subject).to_not be_valid
   end
-
 end
