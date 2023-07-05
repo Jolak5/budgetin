@@ -1,5 +1,4 @@
 require 'faker'
-require 'open-uri'
 
 FactoryBot.define do
   factory :group do
@@ -8,9 +7,9 @@ FactoryBot.define do
 
     after(:build) do |group|
       group.icon.attach(
-        io: URI.open(Faker::LoremFlickr.image),
-        filename: "#{Faker::Lorem.word}.png",
-        content_type: 'image/png'
+        io: File.open(Rails.root.join('app', 'assets', 'images', 'icon.jpg')),
+        filename: "#{Faker::Lorem.word}.jpeg",
+        content_type: 'image/jpeg'
       )
     end
   end
