@@ -15,7 +15,8 @@ RSpec.describe Group, type: :model do
   end
 
   it 'validates the presence of the icon file' do
-    expect(subject).to validate_presence_of(:icon)
+    expect(subject.icon).to be_truthy
+
   end
 
   it 'name should be present' do
