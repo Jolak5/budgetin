@@ -73,7 +73,6 @@ a {
   background-color: #3778c2;
   padding: 20px;
   color: white;
-  text-align: centers;
 }
 
 .group-container,
@@ -84,10 +83,6 @@ a {
   margin: 10px 20px;
   background-color: white;
   padding: 5px 20px;
-}
-
-#groups > a {
-  color: black;
 }
 
 .group-img {
@@ -157,6 +152,10 @@ a {
   margin-top: 20px;
 }
 
+.back-link a:hover {
+  text-decoration: underline;
+}
+
 .back-link a {
   display: inline-block;
   color: #4caf50;
@@ -164,6 +163,6 @@ a {
   font-weight: bold;
 }
 
-.back-link a:hover {
-  text-decoration: underline;
+#groups > a {
+  color: black;
 }
