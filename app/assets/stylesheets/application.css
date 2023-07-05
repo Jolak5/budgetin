@@ -156,13 +156,13 @@ a {
   text-decoration: underline;
 }
 
+#groups > a {
+  color: black;
+}
+
 .back-link a {
   display: inline-block;
   color: #4caf50;
   text-decoration: none;
   font-weight: bold;
-}
-
-#groups > a {
-  color: black;
 }
