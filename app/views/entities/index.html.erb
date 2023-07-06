@@ -4,7 +4,9 @@
     <%= link_to "Back", root_path %>
   </div>
   <h1>Transactions</h1>
-
+  <% if user_signed_in? %>
+    <%= link_to "Logout", sign_out_user_path, class: "logout", method: :get %>
+  <% end %>
 </div>
 <div class="total-amount">
   <p>Total amount</p>

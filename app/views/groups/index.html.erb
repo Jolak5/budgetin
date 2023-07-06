@@ -1,5 +1,9 @@
 <div class="group-header">
-  <h1>Categories</h1></div>
+  <h1>Categories</h1>
+  <% if user_signed_in? %>
+    <%= link_to "Logout", sign_out_user_path, class:"logout", method: :get %>
+  <% end %>
+</div>
 
 <div id="groups">
   <% @groups.each do |group| %>

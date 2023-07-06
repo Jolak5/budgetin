@@ -47,6 +47,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def sign_out_user
+    sign_out current_user
+    redirect_to root_path
+  end
+  
   # DELETE /users/1 or /users/1.json
   def destroy
     @user.destroy

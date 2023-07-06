@@ -37,6 +37,8 @@ a {
   color: #434b54;
 }
 
+/* Sign out */
+
 /* .splash-btn-div {
   margin-top: 10%;
 } */
@@ -55,6 +57,18 @@ a {
 .signup-link:hover,
 .login-link:hover {
   text-decoration: underline;
+}
+
+.group-header,
+.new-group,
+.entity-header {
+  position: relative;
+}
+
+.logout {
+  position: absolute;
+  right: 20px;
+  color: white;
 }
 
 /* entity header */
@@ -159,7 +173,8 @@ a {
   padding: 5px 20px;
 }
 
-.form-group {
+.form-group,
+.field {
   margin-bottom: 20px;
 }
 
@@ -170,7 +185,8 @@ a {
 .form-group input[type="text"],
 .form-group input[type="file"],
 .form-group textarea,
-.form-group .number_field {
+.form-group .number_field,
+.field input {
   width: 95%;
   padding: 10px;
   border: 1px solid #ccc;
