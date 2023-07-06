@@ -102,7 +102,8 @@ In order to run this project you need: Ruby and Rails.
 
 ### Install
 
-To install re run bundle install
+To install re run
+bundle install
 
 ### Usage
 
