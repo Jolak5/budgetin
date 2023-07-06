@@ -1,9 +1,6 @@
 class EntitiesController < ApplicationController
-
   before_action :authenticate_user!
 
-
-  # GET /entities or /entities.json
   def index
     @entities = current_user.entities
     @group = Group.find(params[:group_id])

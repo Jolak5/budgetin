@@ -7,11 +7,11 @@ class ApplicationController < ActionController::Base
       redirect_to splash_index_path
     end
   end
+
   protected
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
     devise_parameter_sanitizer.permit(:account_update, keys: [:name])
   end
-
 end
