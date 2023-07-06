@@ -1,9 +1,6 @@
 class GroupsController < ApplicationController
-  load_and_authorize_resource
   before_action :authenticate_user!
-  before_action :set_group, only: %i[show edit update destroy]
 
-  # GET /groups or /groups.json
   def index
     @group = current_user.groups
     @total_amounts = Group.includes(:user, :entities).order(created_at: :desc)
