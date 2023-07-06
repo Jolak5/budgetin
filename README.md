@@ -76,16 +76,29 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
-gem install rails
+In order to run this project you need:
+
+- Ruby installed in your machine
+
+- `gem install rails` (Ruby gem)
 
 ### Prerequisites
 
 In order to run this project you need: Ruby and Rails.
 
+### Live link
+
+<a href="https://budgetin.onrender.com/">Live link</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Setup
 
-Clone this [repository](https://github.com/Jolak5/budgetin.git) to your desired folder.
+- Clone this [repository](https://github.com/Jolak5/budgetin.git) to your desired folder.
+- cd Recipe-app-Group-project
+- bundle install
+- rails db:create
+- rails db:migrate
 
 ### Install
 
