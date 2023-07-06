@@ -102,7 +102,8 @@ In order to run this project you need: Ruby and Rails.
 
 ### Install
 
-To install re run bundle install
+To install re run
+bundle install
 
 ### Usage
 
@@ -127,6 +128,13 @@ bin/rails test test/model/group/group_test.rb
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/olatunji-kayode/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Transitions**
+- [ ] **[Left side menu to improve the navigability of the app.]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
