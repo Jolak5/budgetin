@@ -31,7 +31,7 @@
 
 **[budgetin]**
 
-- The AI update will be a classic example of a blog website. It provides updates about AI
+- This is a budgeting app to help people keep track of their expenses.
 
 ## 🛠 Built With <a name="built-with"></a>
 
