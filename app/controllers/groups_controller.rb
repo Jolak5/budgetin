@@ -3,6 +3,8 @@ class GroupsController < ApplicationController
 
   def index
     @group = current_user.groups
+    @groups = current_user.groups.includes(:entities)
+
     @total_amounts = Group.includes(:user, :entities).order(created_at: :desc)
   end
 

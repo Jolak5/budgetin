@@ -2,9 +2,8 @@ class EntitiesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @entities = current_user.entities
+    @entities = current_user.entities.includes(:groups)
     @group = Group.find(params[:group_id])
-    @entities = @group.entities
     @total_amounts = Group.includes(:user, :entities).order(created_at: :desc)
   end
 
